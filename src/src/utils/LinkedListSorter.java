@@ -13,7 +13,7 @@ import src.datastructures.LinkedList;
 public class LinkedListSorter {
     //  Insertion sort for linked list
     @SuppressWarnings("Unchecked")
-    public static void sort(LinkedList list, Comparator comparator)
+    public static void sort(LinkedList<?> list, Comparator comparator)
     {
         int size = list.getSize();
         if(size < 2){
