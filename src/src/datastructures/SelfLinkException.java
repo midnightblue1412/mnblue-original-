@@ -7,7 +7,7 @@ package src.datastructures;
 
 /**
  *
- * @author user
+ * @author midnightblue1412
  */
 public class SelfLinkException extends Exception{
     public SelfLinkException()

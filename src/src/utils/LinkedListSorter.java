@@ -8,7 +8,7 @@ import src.datastructures.LinkedList;
 
 /**
  *
- * @author user
+ * @author midnightblue1412
  */
 public class LinkedListSorter {
     //  Insertion sort for linked list

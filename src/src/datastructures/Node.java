@@ -6,7 +6,7 @@ package src.datastructures;
 
 /**
  *
- * @author user
+ * @author midnightblue1412
  * @param <T>: type to be contained by node instance
  */
 public final class Node<T> {

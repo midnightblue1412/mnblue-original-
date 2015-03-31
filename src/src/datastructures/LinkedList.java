@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author user
+ * @author midnightblue1412
  * @param <E>: type of elements to be stored in collection
  */
 public class LinkedList<E> implements Iterable<E>{

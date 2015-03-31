@@ -7,7 +7,7 @@ import java.util.EmptyStackException;
 
 /**
  *
- * @author user
+ * @author midnightblue1412
  * @param <E>: type of stack elements
  */
 public class Stack<E> {
