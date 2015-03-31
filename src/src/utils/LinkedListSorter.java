@@ -20,7 +20,7 @@ public class LinkedListSorter {
             return;
         }
         
-        //  Still unsure of this algorithm...
+        //  Insertion sort for linkedlists
         for(int current = 1; current < size; current++)
         {
             Object o1 = list.elementAt(current);
