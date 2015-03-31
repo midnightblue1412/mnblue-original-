@@ -38,6 +38,13 @@ public class LinkedList<E> implements Iterable<E>{
         return last.value;
     }
     
+    public E elementAt(int index)
+    {
+        Enumerator enumerator = iterator();
+        enumerator.traverse(index);
+        return enumerator.next();
+    }
+    
 /*
  *  Methods
  */    
@@ -57,13 +64,6 @@ public class LinkedList<E> implements Iterable<E>{
             last = new Node<>(last, value);
         }
         size++;
-    }
-    
-    public E elementAt(int index)
-    {
-        Enumerator enumerator = iterator();
-        enumerator.traverse(index);
-        return enumerator.next();
     }
     
     //  insert a new item at spcified index
