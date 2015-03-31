@@ -85,6 +85,14 @@ public class LinkedList<E> implements Iterable<E>{
         size++;
     }
     
+    //  Returns the value at the specified index and removes it from the list
+    public E popItem(int index)
+    {
+        E temp = elementAt(index);
+        remove(index);
+        return temp;
+    }
+    
     //  Move an item to another location in the list
     public void moveItemFrom(int itemLocation, int destination)
     {
