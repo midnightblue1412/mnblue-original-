@@ -46,7 +46,7 @@ public class Queue<E> implements Serializable{
         return list.getFirstElement();
     }
     
-    public E qGetLastItem()
+    public E qLastItem()
     {
         return list.getLastElement();
     }
