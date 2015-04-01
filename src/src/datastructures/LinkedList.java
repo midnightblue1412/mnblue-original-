@@ -167,8 +167,8 @@ public class LinkedList<E> implements Iterable<E>{
         int index = indexOf(value);
         if(index >= 0){
             remove(index);
-        }
-        size--;
+            size--;
+        }        
     }
     
     //  Removes element at specified index
