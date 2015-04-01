@@ -179,6 +179,13 @@ public class LinkedList<E> implements Iterable<E>{
         enumerator.remove();
     }
     
+    public void clear()
+    {
+        first = null;
+        last = null;
+        size = 0;
+    }
+    
     public Enumerator iterator()
     {
         return new Enumerator();
