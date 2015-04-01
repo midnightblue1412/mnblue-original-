@@ -4,8 +4,6 @@
 package src.datastructures;
 
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -82,6 +80,7 @@ public class LinkedList<E> implements Iterable<E>{
             enumerator.current.insertBefore(new Node<>(value));
         } catch (SelfLinkException ex) {
             //  Nah.. no going here...
+            System.err.println("An unexpected error occured.");
         }
         
         size++;
@@ -117,6 +116,7 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  nah....
+                System.err.println("An unexpected error occured.");
             }
         }else if(destination == size){
             try {
@@ -125,6 +125,7 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  nah....
+                System.err.println("An unexpected error occured.");
             }
         }if(itemLocation > destination){
             //  from higher index to lower index
@@ -134,6 +135,7 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  nah....
+                System.err.println("An unexpected error occured.");
             }
         }else if(itemLocation < destination){
             //  from lower index to higher index
@@ -143,6 +145,7 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  Nah nah nah...
+                System.err.println("An unexpected error occured.");
             }
         }
     }
@@ -169,7 +172,6 @@ public class LinkedList<E> implements Iterable<E>{
         int index = indexOf(value);
         if(index >= 0){
             remove(index);
-            size--;
         }        
     }
     
@@ -260,6 +262,7 @@ public class LinkedList<E> implements Iterable<E>{
                 tmp.unlink();
             } catch (SelfLinkException ex) {
                 //  Nah.... not going here...
+                System.err.println("An unexpected error occured.");
             }
             size--;
         }
