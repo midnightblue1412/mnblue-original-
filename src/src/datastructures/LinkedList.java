@@ -4,6 +4,8 @@
 package src.datastructures;
 
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -150,7 +152,7 @@ public class LinkedList<E> implements Iterable<E>{
     public int indexOf(E value)
     {
         Enumerator enumerator = iterator();
-        for(int i = 0; i< size; i++)
+        for(int i = 0; i < size; i++)
         {
             if(enumerator.next().equals(value)){
                 return i;
@@ -244,6 +246,11 @@ public class LinkedList<E> implements Iterable<E>{
                 first = first.nextNode();
             }else if(current == last){
                 last = last.previousNode();
+                try {
+                    last.linkNext(null);
+                } catch (SelfLinkException ex) {
+                    System.err.println("An unexpected error occured.");
+                }
             }else{
                 current = current.nextNode();
             }
