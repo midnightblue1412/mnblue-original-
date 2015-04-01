@@ -152,10 +152,9 @@ public class LinkedList<E> implements Iterable<E>{
         Enumerator enumerator = iterator();
         for(int i = 0; i< size; i++)
         {
-            if(enumerator.current.value.equals(value)){
+            if(enumerator.next().equals(value)){
                 return i;
             }
-            enumerator.next();
         }
         
         return -1;
