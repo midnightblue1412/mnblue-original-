@@ -80,7 +80,7 @@ public class LinkedList<E> implements Iterable<E>{
             enumerator.current.insertBefore(new Node<>(value));
         } catch (SelfLinkException ex) {
             //  Nah.. no going here...
-            System.err.println("An unexpected error occured.");
+            System.out.println("An unexpected error occured.");
         }
         
         size++;
@@ -116,16 +116,16 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  nah....
-                System.err.println("An unexpected error occured.");
+//                System.out.println("An unexpected error occured.");
             }
-        }else if(destination == size){
+        }else if(destination == size){  //  since size is now decremented
             try {
                 last.insertAfter(temp);   
                 last = last.nextNode();
                 size++;
             } catch (SelfLinkException ex) {
                 //  nah....
-                System.err.println("An unexpected error occured.");
+//                System.out.println("An unexpected error occured.");
             }
         }if(itemLocation > destination){
             //  from higher index to lower index
@@ -135,7 +135,8 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  nah....
-                System.err.println("An unexpected error occured.");
+//                System.out.println("An unexpected error occured. Location: " + temp.value + 
+//                        " Destination: " + enumerator.next());
             }
         }else if(itemLocation < destination){
             //  from lower index to higher index
@@ -145,7 +146,7 @@ public class LinkedList<E> implements Iterable<E>{
                 size++;
             } catch (SelfLinkException ex) {
                 //  Nah nah nah...
-                System.err.println("An unexpected error occured.");
+//                System.out.println("An unexpected error occured.");
             }
         }
     }
@@ -251,7 +252,7 @@ public class LinkedList<E> implements Iterable<E>{
                 try {
                     last.linkNext(null);
                 } catch (SelfLinkException ex) {
-                    System.err.println("An unexpected error occured.");
+                    System.out.println("An unexpected error occured.");
                 }
             }else{
                 current = current.nextNode();
@@ -262,7 +263,7 @@ public class LinkedList<E> implements Iterable<E>{
                 tmp.unlink();
             } catch (SelfLinkException ex) {
                 //  Nah.... not going here...
-                System.err.println("An unexpected error occured.");
+                System.out.println("An unexpected error occured.");
             }
             size--;
         }
