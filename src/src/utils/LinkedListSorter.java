@@ -30,7 +30,7 @@ public class LinkedListSorter {
                     list.moveItemFrom(current, backstep + 1);
                     break;
                 }else if(comparison < 0 && backstep == 0){
-                    list.moveItemFrom(current, 0);
+                    list.moveItemFrom(current, 0);                    
                 }
             }
         }
