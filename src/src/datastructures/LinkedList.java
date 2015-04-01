@@ -150,11 +150,12 @@ public class LinkedList<E> implements Iterable<E>{
     public int indexOf(E value)
     {
         Enumerator enumerator = iterator();
-        for(int i = 0; i < size; i++)
+        for(int i = 0; i< size; i++)
         {
             if(enumerator.current.value.equals(value)){
                 return i;
             }
+            enumerator.next();
         }
         
         return -1;
