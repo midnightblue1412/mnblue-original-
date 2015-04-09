@@ -100,13 +100,20 @@ public class LinkedList<E> implements Iterable<E>{
         if(itemLocation < 0 || destination < 0 ||
            itemLocation >= size || destination >= size){
             throw new IndexOutOfBoundsException();           
-        }else if(itemLocation == destination){
+        }else if(itemLocation == destination){      //   no movement at all
             return;
         }
         
         Enumerator enumerator = iterator();      
         enumerator.traverse(itemLocation);
-        Node<E> temp = enumerator.current;  
+        Node<E> temp = enumerator.current;
+        
+        if(itemLocation == 0){
+            first = first.nextNode();
+        }else if(itemLocation == size - 1){
+            last = last.previousNode();
+        }
+        
         enumerator.remove();
                 
         if(destination == 0){
